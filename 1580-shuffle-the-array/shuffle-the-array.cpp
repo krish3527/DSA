@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> shuffle(vector<int>& nums, int n) {
-        int s=nums.size();
+       /* int s=nums.size();
         vector<int>temp1;
         vector<int>temp2;
         vector<int>set1;
@@ -29,5 +29,12 @@ public:
         }
         return set1;
 
+    }*/
+    vector<int>ans;
+    for(int i =0;i<n;i++){
+         ans.push_back(nums[i]);
+         ans.push_back(nums[n+i]);
+    }
+    return ans;
     }
 };
