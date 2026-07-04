@@ -30,15 +30,15 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-07-04T07:54:30.494Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 14.4 MB (beats 38.03%)  
+**Submitted:** 2026-07-04T07:54:36.614Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        sort(nums1.begin(),nums1.end());
+       /* sort(nums1.begin(),nums1.end());
         sort(nums2.begin(),nums2.end());
         vector<int>inter;
         int n1 = nums1.size();
@@ -57,10 +57,19 @@ public:
                  i++;
              }
              else {
-              j++;
+              j++;  // this  one haing nlogn+mlogn
              }
         }
-        return inter;       //using set!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        return inter;   //using set!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    }*/
+    unordered_set<int>st(nums1.begin(),nums1.end());
+    unordered_set<int>result;
+    for(int i=0;i<nums2.size();i++){
+         if(st.find(nums2[i])!=st.end())
+          result.insert(nums2[i]);
+    }
+    vector<int>ans(result.begin(),result.end());
+    return ans;
     }
 
 };
