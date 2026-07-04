@@ -39,36 +39,35 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-07-04T16:18:06.381Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-07-04T16:22:23.891Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int longestConsecutive(vector<int>& nums) {
-        int n = nums.size();
-        for(int i=1;i<n;i++){
-         
-        }
-        return longest;
-        sort(nums.begin(),nums.end());
-        int countcur=0;
-        int longest =1;
-        int last_smallest = INT_MIN;
-            else if(last_smallest!=nums[i]){
-                 
-            }
-                last_smallest = nums[i];
+    int longestConsecutive(vector<int>& nums) {
+        int n = nums.size();
+        sort(nums.begin(),nums.end());
+        int countcur=0;
+        int longest =1;
+        int last_smallest = INT_MIN;
+        for(int i=0;i<n;i++){
+            if(nums[i]-1==last_smallest){
+                 countcur++;
+                 last_smallest= nums[i];
+            }
+            else if(last_smallest!=nums[i]){
+                countcur=1;
+                last_smallest = nums[i];
+                 
+            }
+            longest=max(countcur,longest);
 
-            if(nums[i]-1==last_smallest){
-                 countcur++;
-            }
-    }
-                 last_smallest= nums[i];
-            longest=max(countcur,longest);
-                countcur=1;
+         
+        }
+        return longest;
+    }
 };
-
 ```
 
 ---
