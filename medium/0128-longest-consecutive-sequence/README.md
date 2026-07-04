@@ -39,12 +39,27 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-07-04T10:49:59.261Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-07-04T10:51:16.209Z  
 
 ```cpp
-c
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int n=nums.size();
+        int count=1;
+        for(int i=1;i<n;i++){
+            if(nums[i-1]-nums[i]==-1){
+                 count++;
+            }
 
+             
+        }
+
+        return count;
+    }
+};
 ```
 
 ---
