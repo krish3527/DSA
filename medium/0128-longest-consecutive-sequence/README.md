@@ -39,26 +39,38 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-07-04T11:00:31.665Z  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-07-04T14:45:06.414Z  
 
 ```cpp
-class Solution {
+class Solution {
 public:
-    int longestConsecutive(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
-        int n = nums.size();
-        int count = 1;
-        for (int i = 1; i < n; i++) {
-            if(nums[i - 1] - nums[i] == -1) {
-                count++;
-            } else if (nums.empty())
-                return 0;
-        }
-
-        return count;
-    }
+    int longestConsecutive(vector<int>& nums) {
+        int n = nums.size();
+        int longest=0;
+  
+        for(int i=0;i<n;i++){
+             int x = nums[i];
+                  int count=1;
+int linearsearch(vector<int>& nums,int num){
+     for (int i=0;i<nums.size();i++){
+}
+         if(nums[i]==num)
+     }
+        
+          return true;
+     return false;
+        while(linearsearch(nums,x+1)==true){
+             count++;
+        }
+             longest=max(count,longest);
+    }
+        return longest;
 };
+        }
+            x=x+1;
+
+
 ```
 
 ---
