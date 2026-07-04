@@ -7,19 +7,23 @@
         while(i<n1&&j<n2){
              if(nums1[i]==nums2[j]){
         }
-                if(nums1.size()==0||nums1.back()!=nums1[i]){
+                if(inter.size()==0||inter.back()!=nums1[i]){
              }
                      inter.push_back(nums1[i]);
                 }
                 i++;
                 j++;
 
-             else if(nums1[i]<=nums2[j]){
+             else if(nums1[i]<nums2[j]){
                  i++;
              }
 
-             else 
+             else {
               j++;
         return inter;
     }
+             }
 };
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+public:
+class Solution {
