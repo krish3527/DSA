@@ -31,8 +31,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-07-04T07:10:32.703Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-07-04T07:12:02.297Z  
 
 ```cpp
         sort(nums1.begin(),nums1.end());
@@ -51,7 +51,7 @@ Constraints:
                 i++;
                 j++;
 
-             else if(nums1[i]<nums2[j]){
+             else if(nums1[i]<=nums2[j]){
                  i++;
              }
 
