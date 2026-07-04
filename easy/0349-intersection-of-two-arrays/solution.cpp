@@ -14,7 +14,7 @@
                 i++;
                 j++;
 
-             else if(nums1[i]<nums2[j]){
+             else if(nums1[i]<=nums2[j]){
                  i++;
              }
 
