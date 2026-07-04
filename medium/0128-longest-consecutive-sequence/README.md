@@ -38,9 +38,9 @@ Constraints:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-07-04T16:22:23.891Z  
+**Runtime:** 7 ms (beats 98.93%)  
+**Memory:** 60.2 MB (beats 92.72%)  
+**Submitted:** 2026-07-04T16:22:28.001Z  
 
 ```cpp
 class Solution {
@@ -49,7 +49,7 @@ public:
         int n = nums.size();
         sort(nums.begin(),nums.end());
         int countcur=0;
-        int longest =1;
+        int longest =0;
         int last_smallest = INT_MIN;
         for(int i=0;i<n;i++){
             if(nums[i]-1==last_smallest){
