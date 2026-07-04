@@ -36,27 +36,23 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-07-04T08:43:05.720Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-07-04T08:46:50.270Z  
 
 ```cpp
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
-        int n = arr.size();
-        unordered_map<int,int>mpp;
-        for(int i=0;i<n;i++){
-            mpp[arr[i]]++;   
-        }
-        for(int i=0;i<mpp.size();i++){
-             for(int j=i+1;j<mpp.size()-1;j++){
-                 if(mpp[i]!=mpp[j]){
-                     return true;
-                 }
-             }
+        int n = arr.size(); 
+        sort(arr.begin(),arr.end());
+        for(int i=1;i<n;i++){
+            if(arr[i]==arr[i-1]){
+                 return true;
+            }
+             
         }
         return false;
-        
+         
     }
 };
 ```
