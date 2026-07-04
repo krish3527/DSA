@@ -39,15 +39,15 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-07-04T16:17:27.872Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-07-04T16:18:38.186Z  
 
 ```cpp
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
         int n = nums.size();
-        for(int i=1;i<n;i++){
+        for(int i=0;i<n;i++){
          
         }
         return longest;
@@ -60,7 +60,7 @@ public:
             }
                 last_smallest = nums[i];
 
-            if(nums[i-1]==last_smallest){
+            if(nums[i]-1==last_smallest){
                  countcur++;
             }
     }
