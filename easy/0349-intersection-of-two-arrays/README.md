@@ -32,7 +32,7 @@ Constraints:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.4 MB  
-**Submitted:** 2026-07-04T06:16:30.580Z  
+**Submitted:** 2026-07-04T06:17:18.661Z  
 
 ```cpp
 class Solution {
@@ -41,16 +41,19 @@ public:
         vector<int>inter;
         int n1 = nums1.size();
         int n2= nums2.size();
-  for(int i=0;i<n1;i++){
-             for(int j=0;j<n2;j++){
+  for(int i=0;i<min(n1,n2);i++){
+             for(int j=0;j<min(n1,n2);j++){
                  if(nums1[i]==nums2[j]){
-                     if(inter.size()==0||inter.back()!=nums1[i]||inter.back()!=nums2[j]){
+                     if(inter.size()==0||inter.back()!=nums1[i]){
                          inter.push_back(nums1[i]);
                      }
                  }
+              
+                     
+                 }
 
              }
-        }
+        
         return inter;
     }
 };
