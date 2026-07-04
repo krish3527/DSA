@@ -31,8 +31,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.5 MB  
-**Submitted:** 2026-07-04T06:13:42.338Z  
+**Memory:** 8.4 MB  
+**Submitted:** 2026-07-04T06:16:30.580Z  
 
 ```cpp
 class Solution {
@@ -44,7 +44,7 @@ public:
   for(int i=0;i<n1;i++){
              for(int j=0;j<n2;j++){
                  if(nums1[i]==nums2[j]){
-                     if(inter.size()==0||inter.back()!=nums1[i]){
+                     if(inter.size()==0||inter.back()!=nums1[i]||inter.back()!=nums2[j]){
                          inter.push_back(nums1[i]);
                      }
                  }
