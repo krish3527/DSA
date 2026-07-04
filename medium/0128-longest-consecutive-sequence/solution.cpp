@@ -2,26 +2,24 @@ class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
         int n = nums.size();
-        int longest=0;
-  
-        for(int i=0;i<n;i++){
-             int x = nums[i];
-                  int count=1;
-int linearsearch(vector<int>& nums,int num){
-     for (int i=0;i<nums.size();i++){
-}
-         if(nums[i]==num)
-     }
-        
-          return true;
-     return false;
-        while(linearsearch(nums,x+1)==true){
-             count++;
+        for(int i=1;i<n;i++){
+         
         }
-             longest=max(count,longest);
-    }
         return longest;
-};
-        }
-            x=x+1;
+        sort(nums.begin(),nums.end());
+        int countcur=0;
+        int longest =1;
+        int last_smallest = INT_MIN;
+            else if(last_smallest!=nums[i]){
+                 
+            }
+                last_smallest = nums[i];
 
+            if(nums[i-1]==last_smallest){
+                 countcur++;
+            }
+    }
+                 last_smallest= nums[i];
+            longest=max(countcur,longest);
+                countcur=1;
+};
