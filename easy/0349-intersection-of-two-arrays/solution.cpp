@@ -13,7 +13,7 @@
             i++;
 
             j++;
-            else if(nums1[i]<nums2[j]){
+            else if(nums1[i]<=nums2[j]){
                  i++;
             }
     }
@@ -23,3 +23,7 @@
         int j=0;
              }
 };
+        vector<int>inter;
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+public:
+class Solution {
