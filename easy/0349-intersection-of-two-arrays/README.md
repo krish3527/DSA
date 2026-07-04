@@ -32,38 +32,28 @@ Constraints:
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 8.3 MB  
-**Submitted:** 2026-07-04T06:07:39.232Z  
+**Submitted:** 2026-07-04T06:11:36.407Z  
 
 ```cpp
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        vector<int>inter;
         int n1 = nums1.size();
         int n2= nums2.size();
-        int i =0;
-        while(i<n1&&j<n2){
-        
-             if(nums1[i]==nums2[j]){
-        }
-                 
-            
-                 if(inter.size()==0||inter.back()!=nums1[i]){
-                     inter.push_back(nums1[i]);
+  for(int i=0;i<n1;i++){
+             for(int j=0;j<n2;j++){
+                 if(nums1[i]==nums2[j]){
+                     if(inter.size()==0||inter.back()!=nums1[i]){
+                         inter.push_back(nums1[i]);
+                     }
                  }
-            i++;
 
-            j++;
-            else if(nums1[i]<=nums2[j]){
-                 i++;
-            }
-    }
-            else 
-            j++;
-        return inter;
-        int j=0;
              }
+        }
+        return inter;
+    }
 };
-        vector<int>inter;
-    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-public:
-class Solution {
 
 ```
 
