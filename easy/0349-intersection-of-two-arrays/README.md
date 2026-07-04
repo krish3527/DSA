@@ -31,8 +31,8 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-07-04T06:04:47.905Z  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-07-04T06:07:39.232Z  
 
 ```cpp
         int n1 = nums1.size();
@@ -50,7 +50,7 @@ Constraints:
             i++;
 
             j++;
-            else if(nums1[i]<nums2[j]){
+            else if(nums1[i]<=nums2[j]){
                  i++;
             }
     }
@@ -60,6 +60,10 @@ Constraints:
         int j=0;
              }
 };
+        vector<int>inter;
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+public:
+class Solution {
 
 ```
 
