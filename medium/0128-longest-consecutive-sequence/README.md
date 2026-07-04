@@ -39,22 +39,21 @@ Constraints:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-07-04T10:52:03.762Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-07-04T11:00:31.665Z  
 
 ```cpp
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        sort(nums.begin(),nums.end());
-        int n=nums.size();
-        int count=1;
-        for(int i=1;i<n;i++){
-            if(nums[i-1]-nums[i]==-1){
-                 count++;
-            }
-
-             
+        sort(nums.begin(), nums.end());
+        int n = nums.size();
+        int count = 1;
+        for (int i = 1; i < n; i++) {
+            if(nums[i - 1] - nums[i] == -1) {
+                count++;
+            } else if (nums.empty())
+                return 0;
         }
 
         return count;
