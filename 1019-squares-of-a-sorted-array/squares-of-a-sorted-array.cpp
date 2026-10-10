@@ -8,7 +8,7 @@ public:
     }
     sort(st.begin(),st.end());
     return st;
-    }//her TC IS O(nlogn) sc is o(n)
+    }//here TC IS O(nlogn) sc is o(n)
 };*/
 vector<int>temp(n);
 int left =0;
